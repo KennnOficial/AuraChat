@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="wtf.kennn.aurachat.storage.PlayerStateTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-19T04:39:07" hostname="GIDEON" time="0.242">
+  <properties/>
+  <testcase name="preservesModerationAndIgnoresAcrossRestart()" classname="wtf.kennn.aurachat.storage.PlayerStateTest" time="0.242"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

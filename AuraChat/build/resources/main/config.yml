@@ -1,0 +1,102 @@
+# ============================================================================ #
+#                                                                              #
+#                              A U R A C H A T                                 #
+#                                 by KennnDev                                  #
+#                                                                              #
+#                    A clean chat. A better conversation.                      #
+#                                                                              #
+# ============================================================================ #
+#
+# Server support : Paper 1.21.4 - 1.21.11 | Java 21
+# Reload command : /aurachat reload
+# Text styling   : Legacy color codes with &, such as &d, &7 and &l.
+#                  MiniMessage tags are not supported in this configuration.
+#
+# Keep text values quoted. To include an apostrophe inside single quotes,
+# write it twice: 'You don''t have permission.'
+#
+# Existing installations: replace or merge your server's config.yml manually.
+# Reloading does not overwrite an existing configuration with these defaults.
+#
+# ============================================================================ #
+#  CHAT FORMAT                                                                 #
+# ============================================================================ #
+#
+# Built-in placeholders:
+#   {prefix}  - The player's LuckPerms prefix, or empty if unavailable.
+#   {player}  - The player's account name.
+#   {world}   - The player's current world name.
+#   {message} - The chat message. Keep this placeholder in your format.
+#
+# Optional integrations:
+#   LuckPerms      : Provides {prefix}. Include spacing in the rank prefix.
+#   PlaceholderAPI: Supports %placeholders% with the required expansions.
+#   AuraLobby     : AuraChat takes over its public chat formatter when detected.
+#
+# Players need aurachat.color to use & color codes in their messages.
+#
+chat:
+  format: '{prefix}&f{player} &8» &r{message}'
+
+# ============================================================================ #
+#  ANTI-SPAM                                                                   #
+# ============================================================================ #
+#
+# Applies to public chat and private messages sent through AuraChat.
+# Both share the same cooldown and last accepted message.
+# Bypass permission: aurachat.bypass.antispam (granted to operators by default).
+# Muted players cannot send messages even with the anti-spam bypass permission.
+#
+antispam:
+  enabled: true
+
+  # Minimum delay between accepted messages, in seconds. Set to 0 for no delay.
+  cooldown-seconds: 2
+
+  # Reject the previous accepted message, ignoring case and extra whitespace.
+  block-repeated: true
+
+  # Only check uppercase usage when the message contains at least this many letters.
+  caps-min-letters: 10
+
+  # Reject messages above this percentage of uppercase letters (0-100).
+  # Set to 100 to allow any uppercase ratio.
+  max-caps-percent: 70
+
+# ============================================================================ #
+#  MESSAGES                                                                    #
+# ============================================================================ #
+#
+# Customize each message independently. The AuraChat label is part of the text.
+# Built-in chat placeholders above are only expanded in chat.format.
+#
+messages:
+  # Access and command restrictions.
+  no-permission: '&8[&dAuraChat&8] &cYou don''t have permission to do that.'
+  players-only: '&8[&dAuraChat&8] &cOnly players can use this command.'
+  self: '&8[&dAuraChat&8] &cYou can''t use this command on yourself.'
+
+  # Moderation and public chat availability.
+  muted: '&8[&dAuraChat&8] &cYou are muted and cannot send messages.'
+  unmuted: '&8[&dAuraChat&8] &aYou are no longer muted. You can chat again!'
+  locked: '&8[&dAuraChat&8] &cPublic chat is currently locked.'
+  exempt: '&8[&dAuraChat&8] &cThat player is exempt from being muted.'
+  updated: '&8[&dAuraChat&8] &aThe player''s moderation status has been updated.'
+
+  # Anti-spam feedback.
+  cooldown: '&8[&dAuraChat&8] &ePlease wait before sending another message.'
+  repeated: '&8[&dAuraChat&8] &ePlease don''t repeat the same message.'
+  caps: '&8[&dAuraChat&8] &ePlease use fewer capital letters.'
+
+  # Administration and server-wide announcements.
+  reloaded: '&8[&dAuraChat&8] &aConfiguration reloaded successfully.'
+  chat-locked: '&8[&dAuraChat&8] &cPublic chat has been locked.'
+  chat-unlocked: '&8[&dAuraChat&8] &aPublic chat has been unlocked.'
+  chat-cleared: '&8[&dAuraChat&8] &7The chat has been cleared.'
+
+  # Private messages and ignored players.
+  not-online: '&8[&dAuraChat&8] &cThat player is not online.'
+  ignore-on: '&8[&dAuraChat&8] &7You are now ignoring that player.'
+  ignore-off: '&8[&dAuraChat&8] &aYou are no longer ignoring that player.'
+  no-reply: '&8[&dAuraChat&8] &eYou have no active conversation with an online player.'
+  unavailable: '&8[&dAuraChat&8] &cYou can''t send private messages to that player.'

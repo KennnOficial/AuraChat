@@ -1,0 +1,42 @@
+name: AuraChat
+version: '1.0-SNAPSHOT'
+main: wtf.kennn.aurachat.AuraChat
+api-version: '1.21.4'
+authors: [ KennnDev ]
+softdepend: [LuckPerms, PlaceholderAPI, AuraLobby]
+description: Formato de chat, mensajes privados y moderacion.
+commands:
+  aurachat:
+    description: Show AuraChat help or reload its configuration
+    usage: /aurachat <help|reload>
+  msg:
+    description: Envia un mensaje privado
+    aliases: [tell, w]
+  reply:
+    description: Responde al ultimo mensaje privado
+    aliases: [r]
+  ignore:
+    description: Alterna ignorar a un jugador
+  mute:
+    description: Silencia a un jugador conectado
+  unmute:
+    description: Quita el silencio a un jugador conectado
+  chat:
+    description: Bloquea o limpia el chat
+permissions:
+  aurachat.msg:
+    default: true
+  aurachat.ignore:
+    default: true
+  aurachat.color:
+    default: op
+  aurachat.admin:
+    default: op
+  aurachat.moderate:
+    default: op
+  aurachat.bypass.antispam:
+    default: op
+  aurachat.bypass.lock:
+    default: op
+  aurachat.mute.exempt:
+    default: op

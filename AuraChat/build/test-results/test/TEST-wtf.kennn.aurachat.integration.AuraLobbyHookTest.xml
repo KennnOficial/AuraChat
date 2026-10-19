@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="wtf.kennn.aurachat.integration.AuraLobbyHookTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-19T04:39:07" hostname="GIDEON" time="0.102">
+  <properties/>
+  <testcase name="absentOrDisabledLobbyDoesNotChangeHandlers()" classname="wtf.kennn.aurachat.integration.AuraLobbyHookTest" time="0.087"/>
+  <testcase name="removesOnlyLobbyFormatterAndRestoresItOnce()" classname="wtf.kennn.aurachat.integration.AuraLobbyHookTest" time="0.004"/>
+  <testcase name="disabledLobbyIsNotRestoredAndNewInstanceCanTakeOver()" classname="wtf.kennn.aurachat.integration.AuraLobbyHookTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
